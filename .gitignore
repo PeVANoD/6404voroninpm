@@ -1,0 +1,15 @@
+.venv/
+results/
+__pycache__/
+*.pyc
+.DS_Store
+.flake8
+test_images/output_*
+.env
+Pipfile
+Pipfile.lock
+main_lab2.py
+config.py
+cat_image_processor.py
+cat_image.py
+processed_images
