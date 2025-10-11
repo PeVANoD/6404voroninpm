@@ -79,26 +79,9 @@ class ImageProcessing(interfaces.IImageProcessing):
         return output, execution_time
 
     def rgb_to_grayscale(self, image: np.ndarray) -> tuple:
-        """
-        Преобразует RGB-изображение в оттенки серого.
-
-        Args:
-            image (np.ndarray): Входное RGB-изображение.
-
-        Returns:
-            tuple: (grayscale_image, execution_time)
-        """
         start_time = time.time()
         
-        red_coef = 0.299
-        green_coef = 0.587
-        blue_coef = 0.114
-        
-        grayscale = (red_coef * image[:, :, 2] + 
-                    green_coef * image[:, :, 1] + 
-                    blue_coef * image[:, :, 0])
-        
-        grayscale = grayscale.astype(np.uint8)
+        grayscale = np.dot(image[...,:3], [0.299, 0.587, 0.114]).astype(np.float32)
         
         end_time = time.time()
         execution_time = end_time - start_time
@@ -150,18 +133,13 @@ class ImageProcessing(interfaces.IImageProcessing):
     
         return gradient_x, gradient_y
 
-    def _simple_blur(self, image: np.ndarray) -> np.ndarray:
-        """
-        Применяет простое размытие к изображению.
-
-        Args:
-            image (np.ndarray): Входное изображение.
-
-        Returns:
-            np.ndarray: Размытое изображение.
-        """
-        blur_kernel = np.ones((3, 3)) / 9.0
-        return self.convolution(image, blur_kernel)[0]
+    def simple_blur(self, img: np.ndarray) -> np.ndarray:
+        blur_kernel = np.array([[1/9, 1/9, 1/9],
+                            [1/9, 1/9, 1/9],
+                            [1/9, 1/9, 1/9]])
+        
+        result, _ = self.convolution(img, blur_kernel)
+        return result
 
     def edge_detection(self, image: np.ndarray) -> tuple:
         """
@@ -204,7 +182,7 @@ class ImageProcessing(interfaces.IImageProcessing):
         
         try:
             if len(image.shape) == 3:
-                gray = np.dot(image[...,:3], [0.299, 0.587, 0.114]).astype(np.float32)
+                gray, _ = self.rgb_to_grayscale(image)
             else:
                 gray = image.astype(np.float32)
             
@@ -216,17 +194,9 @@ class ImageProcessing(interfaces.IImageProcessing):
             iy[1:-1, :] = gray[2:, :] - gray[:-2, :]
             
             
-            def simple_blur(img):
-                result = np.zeros_like(img)
-                h, w = img.shape
-                for i in range(1, h-1):
-                    for j in range(1, w-1):
-                        result[i, j] = np.mean(img[i-1:i+2, j-1:j+2])
-                return result
-            
-            ix2 = simple_blur(ix * ix)
-            iy2 = simple_blur(iy * iy)
-            ixy = simple_blur(ix * iy)
+            ix2 = self.simple_blur(ix * ix)
+            iy2 = self.simple_blur(iy * iy)
+            ixy = self.simple_blur(ix * iy)
             
             # Отклик Харриса
             det = ix2 * iy2 - ixy * ixy
