@@ -4,8 +4,6 @@ __pycache__/
 *.pyc
 .DS_Store
 .flake8
-test_images/opencv
-test_images/selfRealisation
 .env
 Pipfile
 Pipfile.lock
