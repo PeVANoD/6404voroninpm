@@ -6,10 +6,13 @@ main.py
 Запуск:
     python main.py lab1 <аргументы>    # Для лабораторной работы 1
     python main.py lab2 <аргументы>    # Для лабораторной работы 2
+    python main.py lab3 [-show]        # Лабораторная работа 3
 
 Пример:
     python main.py lab1 edges image.jpg
     python main.py lab2 --limit 5
+    python main.py lab3 -show          # Показывать графики
+    python main.py lab3                # Только сохранять графики
 """
 
 import sys
@@ -24,9 +27,12 @@ def main() -> None:
         print("Использование:")
         print("  python main.py lab1 <аргументы>    # Лабораторная работа 1")
         print("  python main.py lab2 <аргументы>    # Лабораторная работа 2")
+        print("  python main.py lab3 [-show]        # Лабораторная работа 3")
         print("\nПримеры:")
         print("  python main.py lab1 edges image.jpg")
         print("  python main.py lab2 --limit 5")
+        print("  python main.py lab3 -show          # Показывать графики")
+        print("  python main.py lab3                # Только сохранять графики")
         return
 
     lab_number = sys.argv[1]
@@ -46,10 +52,16 @@ def main() -> None:
         lab2_args = sys.argv[2:]
         sys.argv = [sys.argv[0]] + lab2_args
         main_lab2()
-        
+
+    elif lab_number == "lab3":
+        from airlines.main3 import main_lab3
+        # Проверяем наличие флага -show
+        show_plots = "-show" in sys.argv
+        main_lab3(show_plots=show_plots)
+
     else:
         print("Ошибка: неизвестная лабораторная работа")
-        print("Доступные варианты: lab1, lab2")
+        print("Доступные варианты: lab1, lab2, lab3")
 
 
 if __name__ == "__main__":

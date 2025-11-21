@@ -12,3 +12,4 @@ config.py
 cat_image_processor.py
 cat_image.py
 processed_images/
+plots

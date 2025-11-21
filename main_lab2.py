@@ -44,7 +44,7 @@ def main_lab2() -> None:
     args = parser.parse_args()
 
     try:
-        print("Запуск")
+        print("Запуск лабораторной работы №2")
         print(f"Будет загружено изображений: {args.limit}")
         print(f"Директория для сохранения: {args.output_dir}")
         
@@ -54,16 +54,12 @@ def main_lab2() -> None:
         # Загружаем и обрабатываем изображения
         processor.process_images()
         
-        # Демонстрация операций с изображениями (add и substr)
-        if len(processor.downloaded_images) >= 2:
-            processor.demonstrate_operations()
-        
         print(f"\nОбработка завершена!")
         print(f"Обработано изображений: {len(processor.downloaded_images)}")
         print(f"Результаты сохранены в директории: {args.output_dir}")
         
     except Exception as e:
-        print(f"X Произошла ошибка: {e}")
+        print(f"✗ Произошла ошибка: {e}")
         import traceback
         traceback.print_exc()
 
