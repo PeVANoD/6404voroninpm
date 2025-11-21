@@ -7,9 +7,6 @@ __pycache__/
 .env
 Pipfile
 Pipfile.lock
-main_lab2.py
 config.py
-cat_image_processor.py
-cat_image.py
 processed_images/
-plots
+plots/
