@@ -9,4 +9,5 @@ Pipfile
 Pipfile.lock
 config.py
 processed_images/
+processed_images_async/
 plots/
