@@ -70,7 +70,7 @@ class ImageProcessing(interfaces.IImageProcessing):
                     region = padded_image[i:i+kernel_height, j:j+kernel_width]
                     output[i, j] = np.sum(region * kernel)
         
-        output = np.clip(output, 0, 255).astype(np.uint8)
+        
     
         end_time = time.time()
         execution_time = end_time - start_time
