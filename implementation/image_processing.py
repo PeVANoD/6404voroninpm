@@ -74,7 +74,7 @@ class ImageProcessing(interfaces.IImageProcessing):
     
         end_time = time.time()
         execution_time = end_time - start_time
-        print(f"Свёртка выполнена за {execution_time:.4f} секунд")
+        #print(f"Свёртка выполнена за {execution_time:.4f} секунд")
     
         return output, execution_time
 
@@ -85,7 +85,7 @@ class ImageProcessing(interfaces.IImageProcessing):
         
         end_time = time.time()
         execution_time = end_time - start_time
-        print(f"Преобразование в grayscale выполнено за {execution_time:.4f} секунд")
+        #print(f"Преобразование в grayscale выполнено за {execution_time:.4f} секунд")
         return grayscale, execution_time
 
     def gamma_correction(self, image: np.ndarray, gamma: float = 1.0) -> tuple:

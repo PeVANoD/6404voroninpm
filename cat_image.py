@@ -21,7 +21,7 @@ def timer_decorator(func):
         result = func(*args, **kwargs)
         end_time = time.time()
         execution_time = end_time - start_time
-        print(f"Метод {func.__name__} выполнен за {execution_time:.4f} секунд")
+        #print(f"Метод {func.__name__} выполнен за {execution_time:.4f} секунд")
         return result
     return wrapper
 
@@ -161,7 +161,7 @@ class CatImage(ABC):
         Returns:
             Кортеж (custom_edges, library_edges)
         """
-        print(f"Обработка контуров для породы: {self._breed}")
+        #print(f"Обработка контуров для породы: {self._breed}")
         
         self._processed_edges_custom = self._custom_edge_detection()
         self._processed_edges_library = self._library_edge_detection()
@@ -256,14 +256,14 @@ class ColorCatImage(CatImage):
     
     def _custom_edge_detection(self) -> np.ndarray:
         """Пользовательское обнаружение контуров."""
-        print("Пользовательское обнаружение контуров (метод из lab1)...")
+        #print("Пользовательское обнаружение контуров (метод из lab1)...")
         edges, execution_time = self._image_processor.edge_detection(self._image_data)
-        print(f"Пользовательские контуры найдены за {execution_time:.4f} секунд")
+        #print(f"Пользовательские контуры найдены за {execution_time:.4f} секунд")
         return edges
     
     def _library_edge_detection(self) -> np.ndarray:
         """Библиотечное обнаружение контуров с использованием OpenCV Canny."""
-        print("Библиотечное обнаружение контуров (OpenCV Canny)...")
+        #print("Библиотечное обнаружение контуров (OpenCV Canny)...")
         gray = self._rgb_to_grayscale(self._image_data)
         edges = cv2.Canny(gray, 50, 150)
         return edges
@@ -352,13 +352,13 @@ def create_cat_image(image_data: np.ndarray, image_url: str, breed: str) -> CatI
     """
     if len(image_data.shape) == 2:
         # 2D массив - чёрно-белое изображение
-        print(f"Создаём GrayscaleCatImage для {breed}")
+        #print(f"Создаём GrayscaleCatImage для {breed}")
         return GrayscaleCatImage(image_data, image_url, breed)
     elif len(image_data.shape) == 3 and image_data.shape[2] == 1:
         # 3D массив с одним каналом - чёрно-белое
-        print(f"Создаём GrayscaleCatImage для {breed}")
+        #print(f"Создаём GrayscaleCatImage для {breed}")
         return GrayscaleCatImage(image_data.squeeze(), image_url, breed)
     else:
         # 3D массив с 3 или 4 каналами - цветное
-        print(f"Создаём ColorCatImage для {breed}")
+        #print(f"Создаём ColorCatImage для {breed}")
         return ColorCatImage(image_data, image_url, breed)

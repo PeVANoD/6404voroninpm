@@ -1,23 +1,18 @@
 """
-Конфигурационный файл для работы с API.
+config.py
+
+Конфигурационные параметры для лабораторных работ.
 """
+
 import os
-from dotenv import load_dotenv
 
-# Загружаем переменные окружения из .env файла с указанием кодировки
-try:
-    load_dotenv(encoding='utf-8')
-except:
-    # Если возникает ошибка с кодировкой, пробуем без нее
-    try:
-        load_dotenv()
-    except Exception as e:
-        print(f"Warning: Could not load .env file: {e}")
+# API настройки
+API_KEY = API_KEY = os.getenv('CAT_API_KEY', 'live_QSP9D2z1VT6qPX0N8xaqUBIN89o6nO4S7KKNunpJFSv7GKI37Y2LOGiiNpyVTE2e')
+BASE_URL = "https://api.thecatapi.com/v1"
 
-# Параметры API
-API_KEY = os.getenv('CAT_API_KEY', 'demo_api_key')  # Запасной ключ для демо
-BASE_URL = 'https://api.thecatapi.com/v1'
-
-# Параметры по умолчанию
+# Настройки по умолчанию
 DEFAULT_LIMIT = 3
-DEFAULT_OUTPUT_DIR = 'processed_images_async'
+DEFAULT_OUTPUT_DIR = "processed_images_async"  # Это значение используется по умолчанию
+
+# Для lab5 можно добавить отдельную константу
+DEFAULT_OUTPUT_DIR_V2 = "processed_images_async_v2"
