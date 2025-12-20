@@ -42,9 +42,8 @@ def main() -> None:
         main_lab4(lab4_args)
 
     elif lab_number == "lab5":
-        from main_lab5 import main_lab5
-        lab5_args = sys.argv[2:]
-        main_lab5(lab5_args)
+        from voroninpm_lab5 import main_lab5
+        main_lab5(sys.argv[2:])
 
     elif lab_number == "test":
         run_tests()

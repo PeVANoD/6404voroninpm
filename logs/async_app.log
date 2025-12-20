@@ -1,102 +1,373 @@
-2025-12-19 02:34:46 - lab5_async_processor - DEBUG - [async_logging_config.py:88] - Асинхронный логгер успешно сконфигурирован
-2025-12-19 02:34:46 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:621] - 🚀 Запуск асинхронного генераторного пайплайна...
-2025-12-19 02:34:46 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:622] - 💡 Этапы работают параллельно: скачивание ↔ обработка ↔ сохранение
-2025-12-19 02:34:46 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:456] -   Этап сохранения запущен
-2025-12-19 02:34:46 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:314] -   Этап обработки запущен
-2025-12-19 02:34:46 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:319] - Используется 4 воркеров для обработки
-2025-12-19 02:34:46 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:144] -   Этап скачивания запущен
-2025-12-19 02:34:46 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:59] - Получение 5 URL изображений из API...
-2025-12-19 02:34:47 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 1 начато: exotic_shorthair
-2025-12-19 02:34:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:209] - Изображение 1 подходящего размера: 1083x971, порода: exotic_shorthair
-2025-12-19 02:34:48 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 1 завершено: exotic_shorthair - 1083x971 за 0.99 сек
-2025-12-19 02:34:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 1 начата: exotic_shorthair (1083x971)
-2025-12-19 02:34:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 1 получен: exotic_shorthair
-2025-12-19 02:34:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 2 начато: colorpoint_shorthair
-2025-12-19 02:34:49 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:214] - Изображение 2 слишком большое: 2448x3264 > 1500 (попытка 1/3, порода: colorpoint_shorthair)
-2025-12-19 02:34:54 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:295] - Получен новый URL изображения с породой: maine_coon
-2025-12-19 02:34:54 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:227] - 🔄 Смена URL для изображения 2: 'colorpoint_shorthair' → 'maine_coon'
-2025-12-19 02:34:55 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:207] - ✅ Изображение 2: порода изменена 'colorpoint_shorthair' → 'maine_coon'
-2025-12-19 02:34:55 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 2 завершено: maine_coon - 1250x650 за 6.61 сек (смена породы)
-2025-12-19 02:34:55 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:173] - Порода изображения 2 изменена: 'colorpoint_shorthair' → 'maine_coon'
-2025-12-19 02:34:55 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 2 начата: maine_coon (1250x650)
-2025-12-19 02:34:55 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 2 получен: colorpoint_shorthair
-2025-12-19 02:34:55 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 3 начато: javanese
-2025-12-19 02:34:55 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:209] - Изображение 3 подходящего размера: 1280x1010, порода: javanese
-2025-12-19 02:34:55 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 3 завершено: javanese - 1280x1010 за 0.36 сек
-2025-12-19 02:34:55 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 3 начата: javanese (1280x1010)
-2025-12-19 02:34:55 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 3 получен: javanese
-2025-12-19 02:34:55 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 4 начато: norwegian_forest_cat
-2025-12-19 02:34:57 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:214] - Изображение 4 слишком большое: 3840x2160 > 1500 (попытка 1/3, порода: norwegian_forest_cat)
-2025-12-19 02:34:59 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:295] - Получен новый URL изображения с породой: aegean
-2025-12-19 02:34:59 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:227] - 🔄 Смена URL для изображения 4: 'norwegian_forest_cat' → 'aegean'
-2025-12-19 02:35:00 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:207] - ✅ Изображение 4: порода изменена 'norwegian_forest_cat' → 'aegean'
-2025-12-19 02:35:00 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 4 завершено: aegean - 1200x800 за 4.35 сек (смена породы)
-2025-12-19 02:35:00 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:173] - Порода изображения 4 изменена: 'norwegian_forest_cat' → 'aegean'
-2025-12-19 02:35:00 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 4 начата: aegean (1200x800)
-2025-12-19 02:35:20 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:362] -     ⚙️ Обработка 1 завершена: exotic_shorthair - за 31.48 сек
-2025-12-19 02:35:20 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 1 начато: exotic_shorthair
-2025-12-19 02:35:20 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 4 получен: norwegian_forest_cat
-2025-12-19 02:35:20 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 5 начато: tonkinese
-2025-12-19 02:35:20 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_custom_edges.png
-2025-12-19 02:35:20 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_original.png
-2025-12-19 02:35:20 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_library_edges.png
-2025-12-19 02:35:20 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_ORIGINAL_PLUS_CUSTOM.png
-2025-12-19 02:35:20 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_ORIGINAL_MINUS_CUSTOM.png
-2025-12-19 02:35:20 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 1
-2025-12-19 02:35:20 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 1 завершено - за 0.58 сек
-2025-12-19 02:35:21 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 1 полностью готово: exotic_shorthair (1083x971) - прошло 34.27 сек
-2025-12-19 02:35:22 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:209] - Изображение 5 подходящего размера: 768x1024, порода: tonkinese
-2025-12-19 02:35:22 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 5 завершено: tonkinese - 768x1024 за 2.01 сек
-2025-12-19 02:35:22 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 5 начата: tonkinese (768x1024)
-2025-12-19 02:35:23 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:362] -     ⚙️ Обработка 2 завершена: maine_coon - за 28.40 сек
-2025-12-19 02:35:23 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 2 начато: maine_coon
-2025-12-19 02:35:23 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 5 получен: tonkinese
-2025-12-19 02:35:24 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:180] - 📊 Скачивание завершено: 5/5 успешно, 0 неудачно
-2025-12-19 02:35:24 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:381] - Обработка оставшихся 3 задач...
-2025-12-19 02:35:24 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_maine_coon_custom_edges.png
-2025-12-19 02:35:24 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_maine_coon_ORIGINAL_PLUS_CUSTOM.png
-2025-12-19 02:35:24 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_maine_coon_original.png
-2025-12-19 02:35:24 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_maine_coon_library_edges.png
-2025-12-19 02:35:24 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_maine_coon_ORIGINAL_MINUS_CUSTOM.png
-2025-12-19 02:35:24 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 2
-2025-12-19 02:35:24 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 2 завершено - за 0.37 сек
-2025-12-19 02:35:24 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 2 полностью готово: maine_coon (1250x650) - прошло 37.58 сек
-2025-12-19 02:35:33 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 4 завершена: aegean - за 32.79 сек
-2025-12-19 02:35:33 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 4 начато: aegean
-2025-12-19 02:35:33 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 04_aegean_library_edges.png
-2025-12-19 02:35:33 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 04_aegean_ORIGINAL_PLUS_CUSTOM.png
-2025-12-19 02:35:33 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 04_aegean_original.png
-2025-12-19 02:35:33 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 04_aegean_ORIGINAL_MINUS_CUSTOM.png
-2025-12-19 02:35:33 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 04_aegean_custom_edges.png
-2025-12-19 02:35:33 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 4
-2025-12-19 02:35:33 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 4 завершено - за 0.34 сек
-2025-12-19 02:35:33 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 4 полностью готово: aegean (1200x800) - прошло 46.66 сек
-2025-12-19 02:35:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 3 завершена: javanese - за 42.15 сек
-2025-12-19 02:35:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 3 начато: javanese
-2025-12-19 02:35:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_javanese_library_edges.png
-2025-12-19 02:35:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_javanese_custom_edges.png
-2025-12-19 02:35:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_javanese_ORIGINAL_PLUS_CUSTOM.png
-2025-12-19 02:35:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_javanese_original.png
-2025-12-19 02:35:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_javanese_ORIGINAL_MINUS_CUSTOM.png
-2025-12-19 02:35:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 3
-2025-12-19 02:35:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 3 завершено - за 0.44 сек
-2025-12-19 02:35:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 3 полностью готово: javanese (1280x1010) - прошло 51.77 сек
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 5 завершена: tonkinese - за 20.74 сек
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 5 начато: tonkinese
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:408] - 📊 Обработка завершена: 5/5 успешно, 0 неудачно
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 05_tonkinese_custom_edges.png
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 05_tonkinese_ORIGINAL_PLUS_CUSTOM.png
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 05_tonkinese_ORIGINAL_MINUS_CUSTOM.png
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 05_tonkinese_original.png
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 05_tonkinese_library_edges.png
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 5
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 5 завершено - за 0.44 сек
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 5 полностью готово: tonkinese (768x1024) - прошло 56.88 сек
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:527] - 📊 Сохранение завершено: 5/5 успешно, 0 неудачно
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:644] - ============================================================
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:645] - 📊 ИТОГОВАЯ СТАТИСТИКА:
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:646] - ============================================================
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:647] - 🎯 Всего изображений: 5
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:648] - ⏱️ Общее время: 56.88 секунд
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:649] - 📈 Среднее время на изображение: 11.38 секунд
-2025-12-19 02:35:43 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:650] - ============================================================
+2025-12-19 03:13:56 - lab5_async_processor - DEBUG - [async_logging_config.py:88] - Асинхронный логгер успешно сконфигурирован
+2025-12-19 03:13:56 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:621] - 🚀 Запуск асинхронного генераторного пайплайна...
+2025-12-19 03:13:56 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:622] - 💡 Этапы работают параллельно: скачивание ↔ обработка ↔ сохранение
+2025-12-19 03:13:56 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:456] -   Этап сохранения запущен
+2025-12-19 03:13:57 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:314] -   Этап обработки запущен
+2025-12-19 03:13:57 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:319] - Используется 4 воркеров для обработки
+2025-12-19 03:13:57 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:144] -   Этап скачивания запущен
+2025-12-19 03:13:57 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:59] - Получение 2 URL изображений из API...
+2025-12-19 03:13:59 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 1 начато: russian_blue
+2025-12-19 03:14:00 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:209] - Изображение 1 подходящего размера: 1280x853, порода: russian_blue
+2025-12-19 03:14:00 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 1 завершено: russian_blue - 1280x853 за 1.33 сек
+2025-12-19 03:14:00 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 1 начата: russian_blue (1280x853)
+2025-12-19 03:14:00 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 1 получен: russian_blue
+2025-12-19 03:14:00 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 2 начато: somali
+2025-12-19 03:14:01 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:209] - Изображение 2 подходящего размера: 750x750, порода: somali
+2025-12-19 03:14:01 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 2 завершено: somali - 750x750 за 0.49 сек
+2025-12-19 03:14:01 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 2 начата: somali (750x750)
+2025-12-19 03:14:01 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 2 получен: somali
+2025-12-19 03:14:01 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:180] - 📊 Скачивание завершено: 2/2 успешно, 0 неудачно
+2025-12-19 03:14:01 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:381] - Обработка оставшихся 2 задач...
+2025-12-19 03:14:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 2 завершена: somali - за 17.79 сек
+2025-12-19 03:14:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 2 начато: somali
+2025-12-19 03:14:19 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_somali_original.png
+2025-12-19 03:14:19 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_somali_custom_edges.png
+2025-12-19 03:14:19 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_somali_library_edges.png
+2025-12-19 03:14:19 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_somali_ORIGINAL_MINUS_CUSTOM.png
+2025-12-19 03:14:19 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_somali_ORIGINAL_PLUS_CUSTOM.png
+2025-12-19 03:14:19 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 2
+2025-12-19 03:14:19 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 2 завершено - за 0.28 сек
+2025-12-19 03:14:19 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 2 полностью готово: somali (750x750) - прошло 22.13 сек
+2025-12-19 03:14:34 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 1 завершена: russian_blue - за 34.22 сек
+2025-12-19 03:14:34 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 1 начато: russian_blue
+2025-12-19 03:14:34 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:408] - 📊 Обработка завершена: 2/2 успешно, 0 неудачно
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_russian_blue_custom_edges.png
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_russian_blue_original.png
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_russian_blue_ORIGINAL_PLUS_CUSTOM.png
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_russian_blue_library_edges.png
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_russian_blue_ORIGINAL_MINUS_CUSTOM.png
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 1
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 1 завершено - за 0.69 сек
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 1 полностью готово: russian_blue (1280x853) - прошло 38.47 сек
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:527] - 📊 Сохранение завершено: 2/2 успешно, 0 неудачно
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:644] - ============================================================
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:645] - 📊 ИТОГОВАЯ СТАТИСТИКА:
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:646] - ============================================================
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:647] - 🎯 Всего изображений: 2
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:648] - ⏱️ Общее время: 38.48 секунд
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:649] - 📈 Среднее время на изображение: 19.24 секунд
+2025-12-19 03:14:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:650] - ============================================================
+2025-12-20 15:06:03 - lab5_async_processor - DEBUG - [async_logging_config.py:88] - Асинхронный логгер успешно сконфигурирован
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:621] - 🚀 Запуск асинхронного генераторного пайплайна...
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:622] - 💡 Этапы работают параллельно: скачивание ↔ обработка ↔ сохранение
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:456] -   Этап сохранения запущен
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:314] -   Этап обработки запущен
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:319] - Используется 4 воркеров для обработки
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:144] -   Этап скачивания запущен
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:59] - Получение 2 URL изображений из API...
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:105] - Ошибка при запросе к API: Cannot connect to host api.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 1 начато: russian_blue_0
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 1 (попытка 1): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 1 (попытка 1/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 1 (попытка 2): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 1 (попытка 2/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 1 (попытка 3): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 1 (попытка 3/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 1 (попытка 4): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 1 (попытка 4/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 1 (попытка 5): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 1 (попытка 5/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 1 (попытка 6): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 1 (попытка 6/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 1 (попытка 7): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 1 (попытка 7/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 1 (попытка 8): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 1 (попытка 8/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 1 (попытка 9): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 1 (попытка 9/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 1 (попытка 10): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 1 (попытка 10/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:238] - Все 10 попытки загрузки изображения 1 завершились неудачно
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:178] - ❌ Скачивание 1 неудачно после всех попыток
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:114] - Демо URL для изображения 1 получен: russian_blue_0
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 2 начато: abyssinian_1
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 2 (попытка 1): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 2 (попытка 1/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 2 (попытка 2): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 2 (попытка 2/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 2 (попытка 3): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 2 (попытка 3/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 2 (попытка 4): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 2 (попытка 4/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 2 (попытка 5): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 2 (попытка 5/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 2 (попытка 6): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 2 (попытка 6/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 2 (попытка 7): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 2 (попытка 7/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 2 (попытка 8): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 2 (попытка 8/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 2 (попытка 9): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 2 (попытка 9/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:263] - Ошибка при загрузке изображения 2 (попытка 10): Cannot connect to host cdn2.thecatapi.com:443 ssl:default [getaddrinfo failed]
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:233] - Не удалось загрузить изображение 2 (попытка 10/10)
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:238] - Все 10 попытки загрузки изображения 2 завершились неудачно
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - ERROR - [async_cat_image_processor_v2.py:178] - ❌ Скачивание 2 неудачно после всех попыток
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:114] - Демо URL для изображения 2 получен: abyssinian_1
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:180] - 📊 Скачивание завершено: 0/2 успешно, 2 неудачно
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:408] - 📊 Обработка завершена: 0/0 успешно, 0 неудачно
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:527] - 📊 Сохранение завершено: 0/0 успешно, 0 неудачно
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:644] - ============================================================
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:645] - 📊 ИТОГОВАЯ СТАТИСТИКА:
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:646] - ============================================================
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:647] - 🎯 Всего изображений: 0
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:648] - ⏱️ Общее время: 0.11 секунд
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:649] - 📈 Среднее время на изображение: 0.11 секунд
+2025-12-20 15:06:03 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:650] - ============================================================
+2025-12-20 15:08:15 - lab5_async_processor - DEBUG - [async_logging_config.py:88] - Асинхронный логгер успешно сконфигурирован
+2025-12-20 15:08:15 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:621] - 🚀 Запуск асинхронного генераторного пайплайна...
+2025-12-20 15:08:15 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:622] - 💡 Этапы работают параллельно: скачивание ↔ обработка ↔ сохранение
+2025-12-20 15:08:15 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:456] -   Этап сохранения запущен
+2025-12-20 15:08:15 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:314] -   Этап обработки запущен
+2025-12-20 15:08:15 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:319] - Используется 4 воркеров для обработки
+2025-12-20 15:08:15 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:144] -   Этап скачивания запущен
+2025-12-20 15:08:15 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:59] - Получение 2 URL изображений из API...
+2025-12-20 15:08:27 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 1 начато: norwegian_forest_cat
+2025-12-20 15:08:31 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:214] - Изображение 1 слишком большое: 2048x1536 > 1500 (попытка 1/10, порода: norwegian_forest_cat)
+2025-12-20 15:08:39 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:295] - Получен новый URL изображения с породой: american_bobtail
+2025-12-20 15:08:39 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:227] - 🔄 Смена URL для изображения 1: 'norwegian_forest_cat' → 'american_bobtail'
+2025-12-20 15:08:40 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:214] - Изображение 1 слишком большое: 4592x2411 > 1500 (попытка 2/10, порода: american_bobtail)
+2025-12-20 15:08:43 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:295] - Получен новый URL изображения с породой: exotic_shorthair
+2025-12-20 15:08:43 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:227] - 🔄 Смена URL для изображения 1: 'american_bobtail' → 'exotic_shorthair'
+2025-12-20 15:08:44 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:207] - ✅ Изображение 1: порода изменена 'norwegian_forest_cat' → 'exotic_shorthair'
+2025-12-20 15:08:44 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 1 завершено: exotic_shorthair - 940x627 за 17.06 сек (смена породы)
+2025-12-20 15:08:44 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:173] - Порода изображения 1 изменена: 'norwegian_forest_cat' → 'exotic_shorthair'
+2025-12-20 15:08:44 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 1 начата: exotic_shorthair (940x627)
+2025-12-20 15:08:44 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 1 получен: norwegian_forest_cat
+2025-12-20 15:08:44 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 2 начато: oriental
+2025-12-20 15:08:47 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:214] - Изображение 2 слишком большое: 3402x2268 > 1500 (попытка 1/10, порода: oriental)
+2025-12-20 15:08:50 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:295] - Получен новый URL изображения с породой: laperm
+2025-12-20 15:08:50 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:227] - 🔄 Смена URL для изображения 2: 'oriental' → 'laperm'
+2025-12-20 15:08:51 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:207] - ✅ Изображение 2: порода изменена 'oriental' → 'laperm'
+2025-12-20 15:08:51 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 2 завершено: laperm - 1024x1024 за 7.72 сек (смена породы)
+2025-12-20 15:08:51 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:173] - Порода изображения 2 изменена: 'oriental' → 'laperm'
+2025-12-20 15:08:51 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 2 начата: laperm (1024x1024)
+2025-12-20 15:08:51 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 2 получен: oriental
+2025-12-20 15:08:52 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:180] - 📊 Скачивание завершено: 2/2 успешно, 0 неудачно
+2025-12-20 15:08:52 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:381] - Обработка оставшихся 2 задач...
+2025-12-20 15:09:01 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 1 завершена: exotic_shorthair - за 17.13 сек
+2025-12-20 15:09:01 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 1 начато: exotic_shorthair
+2025-12-20 15:09:01 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_original.png
+2025-12-20 15:09:01 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_library_edges.png
+2025-12-20 15:09:01 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_ORIGINAL_PLUS_CUSTOM.png
+2025-12-20 15:09:01 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_custom_edges.png
+2025-12-20 15:09:01 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_ORIGINAL_MINUS_CUSTOM.png
+2025-12-20 15:09:01 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 1
+2025-12-20 15:09:01 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 1 завершено - за 0.22 сек
+2025-12-20 15:09:01 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 1 полностью готово: exotic_shorthair (940x627) - прошло 45.64 сек
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 2 завершена: laperm - за 26.57 сек
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 2 начато: laperm
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:408] - 📊 Обработка завершена: 2/2 успешно, 0 неудачно
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_laperm_original.png
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_laperm_ORIGINAL_PLUS_CUSTOM.png
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_laperm_custom_edges.png
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_laperm_library_edges.png
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_laperm_ORIGINAL_MINUS_CUSTOM.png
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 2
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 2 завершено - за 0.48 сек
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 2 полностью готово: laperm (1024x1024) - прошло 63.09 сек
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:527] - 📊 Сохранение завершено: 2/2 успешно, 0 неудачно
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:644] - ============================================================
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:645] - 📊 ИТОГОВАЯ СТАТИСТИКА:
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:646] - ============================================================
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:647] - 🎯 Всего изображений: 2
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:648] - ⏱️ Общее время: 63.09 секунд
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:649] - 📈 Среднее время на изображение: 31.54 секунд
+2025-12-20 15:09:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:650] - ============================================================
+2025-12-20 16:00:29 - lab5_async_processor - DEBUG - [async_logging_config.py:88] - Асинхронный логгер успешно сконфигурирован
+2025-12-20 16:00:29 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:621] - 🚀 Запуск асинхронного генераторного пайплайна...
+2025-12-20 16:00:29 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:622] - 💡 Этапы работают параллельно: скачивание ↔ обработка ↔ сохранение
+2025-12-20 16:00:29 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:456] -   Этап сохранения запущен
+2025-12-20 16:00:29 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:314] -   Этап обработки запущен
+2025-12-20 16:00:29 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:319] - Используется 4 воркеров для обработки
+2025-12-20 16:00:29 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:144] -   Этап скачивания запущен
+2025-12-20 16:00:29 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:59] - Получение 2 URL изображений из API...
+2025-12-20 16:00:36 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 1 начато: american_curl
+2025-12-20 16:00:41 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:214] - Изображение 1 слишком большое: 1600x1066 > 1500 (попытка 1/10, порода: american_curl)
+2025-12-20 16:00:46 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:295] - Получен новый URL изображения с породой: british_shorthair
+2025-12-20 16:00:46 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:227] - 🔄 Смена URL для изображения 1: 'american_curl' → 'british_shorthair'
+2025-12-20 16:00:47 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:207] - ✅ Изображение 1: порода изменена 'american_curl' → 'british_shorthair'
+2025-12-20 16:00:47 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 1 завершено: british_shorthair - 733x1100 за 11.27 сек (смена породы)
+2025-12-20 16:00:47 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:173] - Порода изображения 1 изменена: 'american_curl' → 'british_shorthair'
+2025-12-20 16:00:47 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 1 начата: british_shorthair (733x1100)
+2025-12-20 16:00:47 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 1 получен: american_curl
+2025-12-20 16:00:47 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 2 начато: toyger
+2025-12-20 16:00:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:209] - Изображение 2 подходящего размера: 1080x1080, порода: toyger
+2025-12-20 16:00:48 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 2 завершено: toyger - 1080x1080 за 1.03 сек
+2025-12-20 16:00:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 2 начата: toyger (1080x1080)
+2025-12-20 16:00:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 2 получен: toyger
+2025-12-20 16:00:48 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:180] - 📊 Скачивание завершено: 2/2 успешно, 0 неудачно
+2025-12-20 16:00:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:381] - Обработка оставшихся 2 задач...
+2025-12-20 16:01:09 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 1 завершена: british_shorthair - за 22.11 сек
+2025-12-20 16:01:09 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 1 начато: british_shorthair
+2025-12-20 16:01:09 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_british_shorthair_original.png
+2025-12-20 16:01:09 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_british_shorthair_custom_edges.png
+2025-12-20 16:01:09 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_british_shorthair_library_edges.png
+2025-12-20 16:01:09 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_british_shorthair_ORIGINAL_MINUS_CUSTOM.png
+2025-12-20 16:01:09 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_british_shorthair_ORIGINAL_PLUS_CUSTOM.png
+2025-12-20 16:01:09 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 1
+2025-12-20 16:01:09 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 1 завершено - за 0.30 сек
+2025-12-20 16:01:09 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 1 полностью готово: british_shorthair (733x1100) - прошло 40.49 сек
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 2 завершена: toyger - за 29.74 сек
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 2 начато: toyger
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:408] - 📊 Обработка завершена: 2/2 успешно, 0 неудачно
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_toyger_library_edges.png
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_toyger_custom_edges.png
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_toyger_original.png
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_toyger_ORIGINAL_PLUS_CUSTOM.png
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_toyger_ORIGINAL_MINUS_CUSTOM.png
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 2
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 2 завершено - за 0.36 сек
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 2 полностью готово: toyger (1080x1080) - прошло 49.21 сек
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:527] - 📊 Сохранение завершено: 2/2 успешно, 0 неудачно
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:644] - ============================================================
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:645] - 📊 ИТОГОВАЯ СТАТИСТИКА:
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:646] - ============================================================
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:647] - 🎯 Всего изображений: 2
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:648] - ⏱️ Общее время: 49.21 секунд
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:649] - 📈 Среднее время на изображение: 24.60 секунд
+2025-12-20 16:01:18 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:650] - ============================================================
+2025-12-20 16:16:57 - lab5_async_processor - DEBUG - [async_logging_config.py:88] - Асинхронный логгер успешно сконфигурирован
+2025-12-20 16:16:57 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:621] - 🚀 Запуск асинхронного генераторного пайплайна...
+2025-12-20 16:16:57 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:622] - 💡 Этапы работают параллельно: скачивание ↔ обработка ↔ сохранение
+2025-12-20 16:16:57 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:456] -   Этап сохранения запущен
+2025-12-20 16:16:57 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:314] -   Этап обработки запущен
+2025-12-20 16:16:57 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:319] - Используется 4 воркеров для обработки
+2025-12-20 16:16:57 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:144] -   Этап скачивания запущен
+2025-12-20 16:16:57 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:59] - Получение 3 URL изображений из API...
+2025-12-20 16:23:35 - lab5_async_processor - DEBUG - [async_logging_config.py:210] - Логгер 'lab5_async_processor' успешно сконфигурирован из файла logging_config.json
+2025-12-20 16:23:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:621] - 🚀 Запуск асинхронного генераторного пайплайна...
+2025-12-20 16:23:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:622] - 💡 Этапы работают параллельно: скачивание ↔ обработка ↔ сохранение
+2025-12-20 16:23:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:456] -   Этап сохранения запущен
+2025-12-20 16:23:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:314] -   Этап обработки запущен
+2025-12-20 16:23:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:319] - Используется 4 воркеров для обработки
+2025-12-20 16:23:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:144] -   Этап скачивания запущен
+2025-12-20 16:23:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:59] - Получение 3 URL изображений из API...
+2025-12-20 16:23:51 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 1 начато: cornish_rex
+2025-12-20 16:23:58 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:214] - Изображение 1 слишком большое: 1600x1190 > 1500 (попытка 1/10, порода: cornish_rex)
+2025-12-20 16:24:04 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:295] - Получен новый URL изображения с породой: exotic_shorthair
+2025-12-20 16:24:04 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:227] - 🔄 Смена URL для изображения 1: 'cornish_rex' → 'exotic_shorthair'
+2025-12-20 16:24:05 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:207] - ✅ Изображение 1: порода изменена 'cornish_rex' → 'exotic_shorthair'
+2025-12-20 16:24:05 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 1 завершено: exotic_shorthair - 1083x971 за 13.42 сек (смена породы)
+2025-12-20 16:24:05 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:173] - Порода изображения 1 изменена: 'cornish_rex' → 'exotic_shorthair'
+2025-12-20 16:24:05 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 1 начата: exotic_shorthair (1083x971)
+2025-12-20 16:24:05 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 1 получен: cornish_rex
+2025-12-20 16:24:05 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 2 начато: siamese
+2025-12-20 16:24:05 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:209] - Изображение 2 подходящего размера: 1152x768, порода: siamese
+2025-12-20 16:24:05 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 2 завершено: siamese - 1152x768 за 0.49 сек
+2025-12-20 16:24:05 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 2 начата: siamese (1152x768)
+2025-12-20 16:24:05 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 2 получен: siamese
+2025-12-20 16:24:05 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 3 начато: tonkinese
+2025-12-20 16:24:06 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:209] - Изображение 3 подходящего размера: 750x750, порода: tonkinese
+2025-12-20 16:24:06 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 3 завершено: tonkinese - 750x750 за 0.48 сек
+2025-12-20 16:24:06 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 3 начата: tonkinese (750x750)
+2025-12-20 16:24:06 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 3 получен: tonkinese
+2025-12-20 16:24:06 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:180] - 📊 Скачивание завершено: 3/3 успешно, 0 неудачно
+2025-12-20 16:24:06 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:381] - Обработка оставшихся 3 задач...
+2025-12-20 16:24:26 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 3 завершена: tonkinese - за 20.41 сек
+2025-12-20 16:24:26 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 3 начато: tonkinese
+2025-12-20 16:24:26 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_tonkinese_original.png
+2025-12-20 16:24:26 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_tonkinese_custom_edges.png
+2025-12-20 16:24:26 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_tonkinese_ORIGINAL_PLUS_CUSTOM.png
+2025-12-20 16:24:26 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_tonkinese_library_edges.png
+2025-12-20 16:24:26 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_tonkinese_ORIGINAL_MINUS_CUSTOM.png
+2025-12-20 16:24:26 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 3
+2025-12-20 16:24:26 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 3 завершено - за 0.23 сек
+2025-12-20 16:24:26 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 3 полностью готово: tonkinese (750x750) - прошло 51.35 сек
+2025-12-20 16:24:34 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 2 завершена: siamese - за 29.27 сек
+2025-12-20 16:24:34 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 2 начато: siamese
+2025-12-20 16:24:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_siamese_library_edges.png
+2025-12-20 16:24:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_siamese_custom_edges.png
+2025-12-20 16:24:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_siamese_ORIGINAL_PLUS_CUSTOM.png
+2025-12-20 16:24:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_siamese_original.png
+2025-12-20 16:24:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_siamese_ORIGINAL_MINUS_CUSTOM.png
+2025-12-20 16:24:35 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 2
+2025-12-20 16:24:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 2 завершено - за 0.28 сек
+2025-12-20 16:24:35 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 2 полностью готово: siamese (1152x768) - прошло 59.77 сек
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 1 завершена: exotic_shorthair - за 33.04 сек
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 1 начато: exotic_shorthair
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:408] - 📊 Обработка завершена: 3/3 успешно, 0 неудачно
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_custom_edges.png
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_original.png
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_ORIGINAL_PLUS_CUSTOM.png
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_ORIGINAL_MINUS_CUSTOM.png
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_exotic_shorthair_library_edges.png
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 1
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 1 завершено - за 0.47 сек
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 1 полностью готово: exotic_shorthair (1083x971) - прошло 63.24 сек
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:527] - 📊 Сохранение завершено: 3/3 успешно, 0 неудачно
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:644] - ============================================================
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:645] - 📊 ИТОГОВАЯ СТАТИСТИКА:
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:646] - ============================================================
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:647] - 🎯 Всего изображений: 3
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:648] - ⏱️ Общее время: 63.24 секунд
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:649] - 📈 Среднее время на изображение: 21.08 секунд
+2025-12-20 16:24:38 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:650] - ============================================================
+2025-12-20 16:25:56 - lab5_async_processor - DEBUG - [async_logging_config.py:210] - Логгер 'lab5_async_processor' успешно сконфигурирован из файла logging_config.json
+2025-12-20 16:25:56 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:621] - 🚀 Запуск асинхронного генераторного пайплайна...
+2025-12-20 16:25:56 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:622] - 💡 Этапы работают параллельно: скачивание ↔ обработка ↔ сохранение
+2025-12-20 16:25:56 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:456] -   Этап сохранения запущен
+2025-12-20 16:25:56 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:314] -   Этап обработки запущен
+2025-12-20 16:25:56 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:319] - Используется 4 воркеров для обработки
+2025-12-20 16:25:56 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:144] -   Этап скачивания запущен
+2025-12-20 16:25:56 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:59] - Получение 3 URL изображений из API...
+2025-12-20 16:25:59 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 1 начато: australian_mist
+2025-12-20 16:26:06 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:209] - Изображение 1 подходящего размера: 1231x1165, порода: australian_mist
+2025-12-20 16:26:06 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 1 завершено: australian_mist - 1231x1165 за 6.36 сек
+2025-12-20 16:26:06 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 1 начата: australian_mist (1231x1165)
+2025-12-20 16:26:06 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 1 получен: australian_mist
+2025-12-20 16:26:06 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 2 начато: cornish_rex
+2025-12-20 16:26:06 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:214] - Изображение 2 слишком большое: 2976x1784 > 1500 (попытка 1/10, порода: cornish_rex)
+2025-12-20 16:26:14 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:295] - Получен новый URL изображения с породой: dragon_li
+2025-12-20 16:26:14 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:227] - 🔄 Смена URL для изображения 2: 'cornish_rex' → 'dragon_li'
+2025-12-20 16:26:14 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:207] - ✅ Изображение 2: порода изменена 'cornish_rex' → 'dragon_li'
+2025-12-20 16:26:14 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 2 завершено: dragon_li - 1080x1080 за 8.89 сек (смена породы)
+2025-12-20 16:26:14 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:173] - Порода изображения 2 изменена: 'cornish_rex' → 'dragon_li'
+2025-12-20 16:26:14 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 2 начата: dragon_li (1080x1080)
+2025-12-20 16:26:14 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 2 получен: cornish_rex
+2025-12-20 16:26:14 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:152] - ⬇️ Скачивание 3 начато: siberian
+2025-12-20 16:26:15 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:209] - Изображение 3 подходящего размера: 1080x686, порода: siberian
+2025-12-20 16:26:15 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:168] -      ✅ Скачивание 3 завершено: siberian - 1080x686 за 0.40 сек
+2025-12-20 16:26:15 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:333] - ⚙️ Обработка 3 начата: siberian (1080x686)
+2025-12-20 16:26:15 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:99] - URL для изображения 3 получен: siberian
+2025-12-20 16:26:15 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:180] - 📊 Скачивание завершено: 3/3 успешно, 0 неудачно
+2025-12-20 16:26:15 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:381] - Обработка оставшихся 3 задач...
+2025-12-20 16:26:37 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 3 завершена: siberian - за 22.27 сек
+2025-12-20 16:26:37 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 3 начато: siberian
+2025-12-20 16:26:37 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_siberian_original.png
+2025-12-20 16:26:37 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_siberian_custom_edges.png
+2025-12-20 16:26:37 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_siberian_library_edges.png
+2025-12-20 16:26:37 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_siberian_ORIGINAL_MINUS_CUSTOM.png
+2025-12-20 16:26:37 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 03_siberian_ORIGINAL_PLUS_CUSTOM.png
+2025-12-20 16:26:37 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 3
+2025-12-20 16:26:37 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 3 завершено - за 0.24 сек
+2025-12-20 16:26:37 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 3 полностью готово: siberian (1080x686) - прошло 41.10 сек
+2025-12-20 16:26:47 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 1 завершена: australian_mist - за 41.83 сек
+2025-12-20 16:26:47 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 1 начато: australian_mist
+2025-12-20 16:26:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_australian_mist_custom_edges.png
+2025-12-20 16:26:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_australian_mist_ORIGINAL_PLUS_CUSTOM.png
+2025-12-20 16:26:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_australian_mist_library_edges.png
+2025-12-20 16:26:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_australian_mist_original.png
+2025-12-20 16:26:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 01_australian_mist_ORIGINAL_MINUS_CUSTOM.png
+2025-12-20 16:26:48 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 1
+2025-12-20 16:26:48 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 1 завершено - за 0.52 сек
+2025-12-20 16:26:48 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 1 полностью готово: australian_mist (1231x1165) - прошло 51.57 сек
+2025-12-20 16:26:49 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:397] -     ⚙️ Обработка 2 завершена: dragon_li - за 34.76 сек
+2025-12-20 16:26:49 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:471] - 💾 Сохранение 2 начато: dragon_li
+2025-12-20 16:26:49 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:408] - 📊 Обработка завершена: 3/3 успешно, 0 неудачно
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_dragon_li_custom_edges.png
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_dragon_li_library_edges.png
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_dragon_li_ORIGINAL_MINUS_CUSTOM.png
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_dragon_li_original.png
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:608] - Файл сохранен: 02_dragon_li_ORIGINAL_PLUS_CUSTOM.png
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - DEBUG - [async_cat_image_processor_v2.py:589] - Сохранено 5/5 файлов для изображения 2
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:540] -    💾 Сохранение 2 завершено - за 0.37 сек
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:543] -   🎯 Изображение 2 полностью готово: dragon_li (1080x1080) - прошло 53.25 сек
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:527] - 📊 Сохранение завершено: 3/3 успешно, 0 неудачно
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:644] - ============================================================
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:645] - 📊 ИТОГОВАЯ СТАТИСТИКА:
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:646] - ============================================================
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:647] - 🎯 Всего изображений: 3
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:648] - ⏱️ Общее время: 53.26 секунд
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:649] - 📈 Среднее время на изображение: 17.75 секунд
+2025-12-20 16:26:50 - lab5_async_processor.async_processor_v2 - INFO - [async_cat_image_processor_v2.py:650] - ============================================================

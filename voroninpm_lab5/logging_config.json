@@ -1,0 +1,45 @@
+{
+  "logging": {
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+      "json_formatter": {
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        "datefmt": "%Y-%m-%d %H:%M:%S",
+        "class": "6404voroninpm_lab5.async_logging_config.JSONFormatter"
+      },
+      "console_formatter": {
+        "format": "%(asctime)s - %(levelname)s - %(message)s",
+        "datefmt": "%H:%M:%S",
+        "class": "logging.Formatter"
+      }
+    },
+    "handlers": {
+      "async_file_handler": {
+        "class": "6404voroninpm_lab5.async_logging_config.AsyncFileHandler",
+        "level": "DEBUG",
+        "formatter": "json_formatter",
+        "filename": "logs/async_app.log",
+        "mode": "a",
+        "encoding": "utf-8"
+      },
+      "console_handler": {
+        "class": "logging.StreamHandler",
+        "level": "INFO",
+        "formatter": "console_formatter",
+        "stream": "ext://sys.stdout"
+      }
+    },
+    "loggers": {
+      "lab5_async_processor": {
+        "level": "DEBUG",
+        "handlers": ["async_file_handler", "console_handler"],
+        "propagate": false
+      }
+    },
+    "root": {
+      "level": "WARNING",
+      "handlers": []
+    }
+  }
+}

@@ -15,9 +15,9 @@ import cv2
 from concurrent.futures import ProcessPoolExecutor
 
 # Импортируем конфигурацию и классы изображений
-from config import API_KEY, BASE_URL, DEFAULT_LIMIT, DEFAULT_OUTPUT_DIR
-from cat_image import CatImage, create_cat_image
-from async_logging_config import get_async_logger
+from .config import API_KEY, BASE_URL, DEFAULT_LIMIT, DEFAULT_OUTPUT_DIR
+from .cat_image import CatImage, create_cat_image
+from .async_logging_config import get_async_logger
 
 
 class AsyncCatImageProcessorV2:
@@ -619,7 +619,7 @@ class AsyncCatImageProcessorV2:
         Все этапы работают ПАРАЛЛЕЛЬНО.
         """
         self._logger.info("🚀 Запуск асинхронного генераторного пайплайна...")
-        #self._logger.info("💡 Этапы работают параллельно: скачивание ↔ обработка ↔ сохранение")
+        self._logger.info("💡 Этапы работают параллельно: скачивание ↔ обработка ↔ сохранение")
         self._start_time = time.time()
         pipeline_start_time = self._start_time
         

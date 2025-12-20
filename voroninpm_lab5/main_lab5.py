@@ -8,8 +8,9 @@ import argparse
 import asyncio
 import time
 import sys
-from async_cat_image_processor_v2 import AsyncCatImageProcessorV2
-from async_logging_config import setup_async_logging
+from .async_cat_image_processor_v2 import AsyncCatImageProcessorV2
+from .async_logging_config import setup_async_logging
+from .config import DEFAULT_OUTPUT_DIR_V2
 
 
 async def main_lab5_async(args_list=None) -> None:
@@ -18,6 +19,12 @@ async def main_lab5_async(args_list=None) -> None:
     """
     parser = argparse.ArgumentParser(
         description="Асинхронная загрузка и обработка изображений животных с асинхронным логированием.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Примеры использования:
+  python -m 6404voroninpm_lab5 --limit 5
+  python -m 6404voroninpm_lab5 --limit 3 --output-dir my_images
+        """
     )
     parser.add_argument(
         "--limit",
@@ -27,8 +34,8 @@ async def main_lab5_async(args_list=None) -> None:
     )
     parser.add_argument(
         "--output-dir",
-        default="processed_images_async_v2",
-        help="Директория для сохранения результатов (по умолчанию: processed_images_async_v2)",
+        default=DEFAULT_OUTPUT_DIR_V2,
+        help=f"Директория для сохранения результатов (по умолчанию: {DEFAULT_OUTPUT_DIR_V2})",
     )
 
     # Парсим аргументы
@@ -53,11 +60,14 @@ async def main_lab5_async(args_list=None) -> None:
         total_time = end_time - start_time
         
         print(f"💾 Результаты сохранены в директории: {args.output_dir}")
+        print(f"⏱️ Общее время выполнения: {total_time:.2f} секунд")
         
     except KeyboardInterrupt:
-        print("⚠️ Программа прервана пользователем")
+        print("\n⚠️ Программа прервана пользователем")
+        sys.exit(1)
     except Exception as e:
         print(f"❌ Произошла ошибка: {e}")
+        sys.exit(1)
 
 
 def main_lab5(args_list=None):
